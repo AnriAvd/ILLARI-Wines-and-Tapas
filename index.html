@@ -1,0 +1,1499 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Illari Vinos y Tapas – Tapas auténticas, vinos seleccionados y ambiente inigualable en el corazón de Málaga. Reserva tu mesa hoy."
+    />
+    <meta
+      name="keywords"
+      content="tapas Málaga, vinos Málaga, restaurante centro Málaga, pintxos Málaga, restaurante catedral Málaga"
+    />
+    <title>Illari Vinos y Tapas | Tapas & Vinos en Málaga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gold: #c9a84c;
+        --gold-light: #e8c97a;
+        --dark: #1a1008;
+        --dark2: #2c1f0e;
+        --cream: #f5efe0;
+        --cream2: #ede3cc;
+        --red-wine: #6b1a2e;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: var(--dark);
+        color: var(--cream);
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* NAV */
+      nav {
+        background: rgba(26, 16, 8, 0.97);
+        backdrop-filter: blur(8px);
+      }
+      .nav-link {
+        color: var(--cream2);
+        transition: color 0.2s;
+        font-size: 0.875rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .nav-link:hover {
+        color: var(--gold);
+      }
+
+      /* HERO */
+      .hero-bg {
+        background: linear-gradient(
+          160deg,
+          #1a1008 0%,
+          #2c1f0e 40%,
+          #6b1a2e 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=60")
+          center/cover no-repeat;
+        opacity: 0.18;
+      }
+      .hero-pattern {
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 50%,
+            rgba(201, 168, 76, 0.07) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(107, 26, 46, 0.15) 0%,
+            transparent 50%
+          );
+      }
+      .gold-line {
+        width: 60px;
+        height: 2px;
+        background: var(--gold);
+      }
+      .btn-primary {
+        background: var(--gold);
+        color: var(--dark);
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s,
+          transform 0.1s;
+        border-radius: 2px;
+      }
+      .btn-primary:hover {
+        background: var(--gold-light);
+        transform: translateY(-1px);
+      }
+      .btn-outline {
+        border: 1.5px solid var(--gold);
+        color: var(--gold);
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        border-radius: 2px;
+        background: transparent;
+      }
+      .btn-outline:hover {
+        background: var(--gold);
+        color: var(--dark);
+      }
+
+      /* SECTIONS */
+      .section-label {
+        color: var(--gold);
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-family: "Lato", sans-serif;
+      }
+      .section-title {
+        font-family: "Playfair Display", serif;
+        line-height: 1.15;
+      }
+      .divider {
+        width: 40px;
+        height: 1px;
+        background: var(--gold);
+      }
+
+      /* SERVICE CARDS */
+      .service-card {
+        background: var(--dark2);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .service-card:hover {
+        border-color: var(--gold);
+        transform: translateY(-3px);
+      }
+      .icon-circle {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(201, 168, 76, 0.12);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* GALLERY */
+      .gallery-item {
+        overflow: hidden;
+        position: relative;
+        background: var(--dark2);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(26, 16, 8, 0.7) 0%,
+          transparent 60%
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+      }
+
+      /* REVIEW CARDS */
+      .review-card {
+        background: var(--dark2);
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        border-radius: 4px;
+      }
+      .stars {
+        color: var(--gold);
+        letter-spacing: 2px;
+      }
+
+      /* CONTACT SECTION */
+      .contact-field {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        color: var(--cream);
+        width: 100%;
+        padding: 12px 14px;
+        font-family: "Lato", sans-serif;
+        font-size: 0.95rem;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+        outline: none;
+      }
+      .contact-field:focus {
+        border-color: var(--gold);
+      }
+      .contact-field::placeholder {
+        color: rgba(245, 239, 224, 0.4);
+      }
+
+      /* STICKY CTA - mobile only */
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        background: var(--dark2);
+        border-top: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 10px 16px;
+        gap: 10px;
+      }
+      @media (min-width: 768px) {
+        .sticky-cta {
+          display: none;
+        }
+      }
+
+      /* MAP EMBED placeholder */
+      .map-placeholder {
+        background: var(--dark2);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* HAMBURGER */
+      .hamburger {
+        cursor: pointer;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--gold);
+        margin: 5px 0;
+        transition: all 0.3s;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      #mobile-menu {
+        display: none;
+        background: var(--dark2);
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+      }
+      #mobile-menu.open {
+        display: block;
+      }
+
+      /* REVIEW LANGUAGE TOGGLE */
+      .lang-btn {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        border-radius: 2px;
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        background: transparent;
+        color: var(--cream2);
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: "Lato", sans-serif;
+      }
+      .lang-btn.active {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+      }
+
+      /* FOOTER */
+      footer {
+        background: #0f0a04;
+        border-top: 1px solid rgba(201, 168, 76, 0.2);
+      }
+
+      /* UTILITIES */
+      .text-gold {
+        color: var(--gold);
+      }
+      .bg-dark2 {
+        background: var(--dark2);
+      }
+      .pb-sticky {
+        padding-bottom: 72px;
+      }
+      @media (min-width: 768px) {
+        .pb-sticky {
+          padding-bottom: 0;
+        }
+      }
+
+      /* SCROLL REVEAL */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="pb-sticky">
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav class="fixed top-0 left-0 right-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="#home" class="flex flex-col leading-none">
+            <span
+              style="
+                font-family: &quot;Playfair Display&quot;, serif;
+                font-size: 1.2rem;
+                color: var(--gold);
+                font-weight: 700;
+                letter-spacing: 0.04em;
+              "
+              >ILLARI</span
+            >
+            <span
+              style="
+                font-size: 0.6rem;
+                letter-spacing: 0.25em;
+                color: var(--cream2);
+                text-transform: uppercase;
+              "
+              >Vinos y Tapas</span
+            >
+          </a>
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#home" class="nav-link">Inicio</a>
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#galeria" class="nav-link">Galería</a>
+            <a href="#resenas" class="nav-link">Reseñas</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+            <a href="tel:951435072" class="btn-primary px-5 py-2 text-sm"
+              >Reservar</a
+            >
+          </div>
+          <!-- Hamburger -->
+          <button class="hamburger md:hidden" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu">
+        <div class="px-4 py-4 flex flex-col gap-1">
+          <a
+            href="#home"
+            class="nav-link py-3 border-b"
+            style="border-color: rgba(201, 168, 76, 0.1)"
+            onclick="closeMenu()"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            class="nav-link py-3 border-b"
+            style="border-color: rgba(201, 168, 76, 0.1)"
+            onclick="closeMenu()"
+            >Servicios</a
+          >
+          <a
+            href="#galeria"
+            class="nav-link py-3 border-b"
+            style="border-color: rgba(201, 168, 76, 0.1)"
+            onclick="closeMenu()"
+            >Galería</a
+          >
+          <a
+            href="#resenas"
+            class="nav-link py-3 border-b"
+            style="border-color: rgba(201, 168, 76, 0.1)"
+            onclick="closeMenu()"
+            >Reseñas</a
+          >
+          <a href="#contacto" class="nav-link py-3" onclick="closeMenu()"
+            >Contacto</a
+          >
+          <a
+            href="tel:951435072"
+            class="btn-primary mt-3 px-4 py-3 text-sm w-full"
+            >📞 Llamar ahora: 951 435 072</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section
+      id="home"
+      class="hero-bg min-h-screen flex items-center relative pt-16"
+    >
+      <div class="hero-pattern"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 relative z-10 w-full">
+        <div class="max-w-xl">
+          <div class="flex items-center gap-3 mb-6 reveal">
+            <div class="gold-line"></div>
+            <span class="section-label">Málaga · Desde el corazón</span>
+          </div>
+          <h1
+            class="section-title text-4xl sm:text-5xl md:text-6xl font-black mb-6 reveal"
+            style="color: var(--cream)"
+          >
+            Tapas con alma,<br /><span class="text-gold"
+              >vinos con historia</span
+            >
+          </h1>
+          <p
+            class="text-base sm:text-lg mb-8 reveal"
+            style="color: var(--cream2); line-height: 1.7; max-width: 480px"
+          >
+            En el centro de Málaga, junto a la Catedral, Illari te ofrece una
+            experiencia gastronómica auténtica: tapas elaboradas con productos
+            frescos, vinos cuidadosamente seleccionados y un ambiente que invita
+            a quedarse.
+          </p>
+          <!-- Stats -->
+          <div class="flex gap-6 mb-10 reveal">
+            <div>
+              <div
+                class="text-gold font-bold text-2xl"
+                style="font-family: &quot;Playfair Display&quot;, serif"
+              >
+                4.7★
+              </div>
+              <div style="font-size: 0.75rem; color: var(--cream2)">
+                Google Reviews
+              </div>
+            </div>
+            <div style="width: 1px; background: rgba(201, 168, 76, 0.3)"></div>
+            <div>
+              <div
+                class="text-gold font-bold text-2xl"
+                style="font-family: &quot;Playfair Display&quot;, serif"
+              >
+                20–30€
+              </div>
+              <div style="font-size: 0.75rem; color: var(--cream2)">
+                por persona
+              </div>
+            </div>
+            <div style="width: 1px; background: rgba(201, 168, 76, 0.3)"></div>
+            <div>
+              <div
+                class="text-gold font-bold text-2xl"
+                style="font-family: &quot;Playfair Display&quot;, serif"
+              >
+                C. Strachan
+              </div>
+              <div style="font-size: 0.75rem; color: var(--cream2)">
+                Distrito Centro
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 reveal">
+            <a href="tel:951435072" class="btn-primary px-7 py-3"
+              >📞 Reservar mesa</a
+            >
+            <a href="#galeria" class="btn-outline px-7 py-3">Ver galería</a>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50"
+      >
+        <span
+          style="
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream2);
+          "
+          >Descubrir</span
+        >
+        <div
+          style="
+            width: 1px;
+            height: 32px;
+            background: var(--gold);
+            animation: pulse 2s infinite;
+          "
+        ></div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section id="servicios" style="background: var(--dark2)" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14 reveal">
+          <span class="section-label block mb-3">Lo que ofrecemos</span>
+          <h2
+            class="section-title text-3xl sm:text-4xl mb-4"
+            style="color: var(--cream)"
+          >
+            Una experiencia completa
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="service-card p-6 reveal">
+            <div class="icon-circle mb-4">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C9A84C"
+                stroke-width="1.5"
+              >
+                <path d="M3 11l19-9-9 19-2-8-8-2z" />
+              </svg>
+            </div>
+            <h3
+              class="text-gold text-xl mb-2"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Tapas Artesanales
+            </h3>
+            <p
+              style="color: var(--cream2); font-size: 0.9rem; line-height: 1.7"
+            >
+              Desde los clásicos boquerones en vinagre hasta pintxos creativos
+              de temporada. Cada tapa está elaborada con productos frescos del
+              mercado local. Un sabor que te transporta.
+            </p>
+          </div>
+
+          <div class="service-card p-6 reveal">
+            <div class="icon-circle mb-4">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C9A84C"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-gold text-xl mb-2"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Carta de Vinos
+            </h3>
+            <p
+              style="color: var(--cream2); font-size: 0.9rem; line-height: 1.7"
+            >
+              Una selección cuidadosa de vinos andaluces y nacionales. Blancos,
+              tintos, generosos y espumosos elegidos para maridar perfectamente
+              con nuestra cocina.
+            </p>
+          </div>
+
+          <div class="service-card p-6 reveal">
+            <div class="icon-circle mb-4">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C9A84C"
+                stroke-width="1.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3
+              class="text-gold text-xl mb-2"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Grupos y Eventos
+            </h3>
+            <p
+              style="color: var(--cream2); font-size: 0.9rem; line-height: 1.7"
+            >
+              Perfectos para celebraciones, cenas de empresa o reuniones entre
+              amigos. Consúltanos para menús privados y reservas de grupos con
+              atención personalizada.
+            </p>
+          </div>
+
+          <div class="service-card p-6 reveal">
+            <div class="icon-circle mb-4">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C9A84C"
+                stroke-width="1.5"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3
+              class="text-gold text-xl mb-2"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Ambiente Acogedor
+            </h3>
+            <p
+              style="color: var(--cream2); font-size: 0.9rem; line-height: 1.7"
+            >
+              Un interior cálido y con personalidad que invita a relajarse. El
+              lugar ideal para descubrir la auténtica gastronomía malagueña en
+              un entorno con encanto.
+            </p>
+          </div>
+
+          <div class="service-card p-6 reveal">
+            <div class="icon-circle mb-4">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C9A84C"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3
+              class="text-gold text-xl mb-2"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Almuerzo y Cena
+            </h3>
+            <p
+              style="color: var(--cream2); font-size: 0.9rem; line-height: 1.7"
+            >
+              Abiertos para comida y cena. Recomendamos reservar con antelación
+              — somos pequeños y nos llenamos rápido, especialmente los fines de
+              semana.
+            </p>
+          </div>
+
+          <div class="service-card p-6 reveal">
+            <div class="icon-circle mb-4">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C9A84C"
+                stroke-width="1.5"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3
+              class="text-gold text-xl mb-2"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Ubicación Premium
+            </h3>
+            <p
+              style="color: var(--cream2); font-size: 0.9rem; line-height: 1.7"
+            >
+              En el corazón del Distrito Centro de Málaga, en la Calle Strachan
+              14, a pocos pasos de la Catedral. Fácil de encontrar, difícil de
+              olvidar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section id="galeria" style="background: var(--dark)" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14 reveal">
+          <span class="section-label block mb-3">Nuestra cocina</span>
+          <h2
+            class="section-title text-3xl sm:text-4xl mb-4"
+            style="color: var(--cream)"
+          >
+            Un festín para los ojos
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+
+        <!-- Gallery Grid: 1 col mobile, 2 tablet, 3 desktop -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Featured image - full width on mobile, spans 2 cols on lg -->
+          <div class="gallery-item lg:col-span-2 rounded" style="height: 300px">
+            <img
+              src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=70"
+              alt="Interior del restaurante Illari"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span
+                style="
+                  color: var(--cream);
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1rem;
+                "
+                >Interior — ambiente íntimo y cálido</span
+              >
+            </div>
+          </div>
+
+          <div class="gallery-item rounded" style="height: 300px">
+            <img
+              src="https://images.unsplash.com/photo-1560717845-968823efbee1?w=600&q=70"
+              alt="Tapas frescas"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span
+                style="
+                  color: var(--cream);
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1rem;
+                "
+                >Tapas del día</span
+              >
+            </div>
+          </div>
+
+          <div class="gallery-item rounded" style="height: 260px">
+            <img
+              src="https://images.unsplash.com/photo-1515669097368-22e68427d265?w=600&q=70"
+              alt="Pintxos artesanales"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span
+                style="
+                  color: var(--cream);
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1rem;
+                "
+                >Pintxos artesanales</span
+              >
+            </div>
+          </div>
+
+          <!-- Hidden on mobile to optimize loading -->
+          <div
+            class="gallery-item rounded hidden sm:block"
+            style="height: 260px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=70"
+              alt="Vinos seleccionados"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span
+                style="
+                  color: var(--cream);
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1rem;
+                "
+                >Vinos seleccionados</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="gallery-item rounded hidden sm:block"
+            style="height: 260px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=70"
+              alt="Productos frescos"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span
+                style="
+                  color: var(--cream);
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1rem;
+                "
+                >Producto fresco de mercado</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10 reveal">
+          <p
+            style="
+              color: var(--cream2);
+              font-size: 0.875rem;
+              margin-bottom: 1rem;
+            "
+          >
+            ¿Te ha dado hambre? Reserva tu mesa ahora.
+          </p>
+          <a href="tel:951435072" class="btn-primary px-8 py-3"
+            >Llamar y reservar</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REVIEWS ===================== -->
+    <section id="resenas" style="background: var(--dark2)" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-6 reveal">
+          <span class="section-label block mb-3"
+            >Lo que dicen nuestros clientes</span
+          >
+          <h2
+            class="section-title text-3xl sm:text-4xl mb-2"
+            style="color: var(--cream)"
+          >
+            Reseñas de Google
+          </h2>
+          <div class="flex items-center justify-center gap-2 mb-4">
+            <span class="stars text-xl">★★★★★</span>
+            <span class="text-gold font-bold text-lg">4.7</span>
+            <span style="color: var(--cream2); font-size: 0.875rem"
+              >— Google Maps</span
+            >
+          </div>
+          <div class="divider mx-auto mb-6"></div>
+          <!-- Language Toggle -->
+          <div class="flex items-center justify-center gap-2">
+            <span style="font-size: 0.8rem; color: var(--cream2)"
+              >Ver reseñas en:</span
+            >
+            <button class="lang-btn active" onclick="setLang('en')" id="btn-en">
+              🇬🇧 English
+            </button>
+            <button class="lang-btn" onclick="setLang('es')" id="btn-es">
+              🇪🇸 Español
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6"
+          id="reviews-container"
+        >
+          <!-- Injected by JS -->
+        </div>
+
+        <div class="mt-10 text-center reveal">
+          <a
+            href="https://maps.google.com/?cid=illari+vinos+tapas+malaga"
+            target="_blank"
+            rel="noopener"
+            class="btn-outline px-6 py-3 text-sm"
+            >Ver todas las reseñas en Google</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contacto" style="background: var(--dark)" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14 reveal">
+          <span class="section-label block mb-3">Ven a visitarnos</span>
+          <h2
+            class="section-title text-3xl sm:text-4xl mb-4"
+            style="color: var(--cream)"
+          >
+            Contacto y Reservas
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="reveal">
+            <h3
+              class="text-gold text-xl mb-6"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Encuéntranos
+            </h3>
+
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="icon-circle flex-shrink-0">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#C9A84C"
+                    stroke-width="1.5"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--cream);
+                      font-weight: 700;
+                      margin: 0 0 2px;
+                    "
+                  >
+                    Dirección
+                  </p>
+                  <p style="color: var(--cream2); font-size: 0.9rem; margin: 0">
+                    C. Strachan, 14, Distrito Centro<br />29015 Málaga, España
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="icon-circle flex-shrink-0">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#C9A84C"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--cream);
+                      font-weight: 700;
+                      margin: 0 0 2px;
+                    "
+                  >
+                    Teléfono
+                  </p>
+                  <a
+                    href="tel:951435072"
+                    style="
+                      color: var(--gold);
+                      font-size: 0.95rem;
+                      text-decoration: none;
+                    "
+                    >951 435 072</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="icon-circle flex-shrink-0">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#C9A84C"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--cream);
+                      font-weight: 700;
+                      margin: 0 0 2px;
+                    "
+                  >
+                    Horario
+                  </p>
+                  <p style="color: var(--cream2); font-size: 0.9rem; margin: 0">
+                    Lunes a Domingo<br />13:00 – 16:00 · 20:00 – 23:30<br /><span
+                      style="color: var(--gold); font-size: 0.8rem"
+                      >Se recomienda reservar</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="icon-circle flex-shrink-0">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#C9A84C"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--cream);
+                      font-weight: 700;
+                      margin: 0 0 4px;
+                    "
+                  >
+                    Cómo llegar
+                  </p>
+                  <a
+                    href="https://maps.google.com/?q=C.+Strachan+14+Málaga"
+                    target="_blank"
+                    rel="noopener"
+                    style="
+                      color: var(--gold);
+                      font-size: 0.875rem;
+                      text-decoration: none;
+                    "
+                    >Ver en Google Maps →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Map embed placeholder -->
+            <div class="map-placeholder rounded mt-8" style="height: 200px">
+              <iframe
+                src="https://maps.google.com/maps?q=Calle+Strachan+14+Malaga+Spain&output=embed"
+                width="100%"
+                height="200"
+                style="
+                  border: 0;
+                  filter: grayscale(60%) contrast(0.9);
+                  border-radius: 4px;
+                "
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Reservation Form -->
+          <div class="reveal">
+            <h3
+              class="text-gold text-xl mb-6"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Solicitar Reserva
+            </h3>
+            <div class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    style="
+                      font-size: 0.78rem;
+                      color: var(--cream2);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      display: block;
+                      margin-bottom: 6px;
+                    "
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Tu nombre"
+                    class="contact-field"
+                  />
+                </div>
+                <div>
+                  <label
+                    style="
+                      font-size: 0.78rem;
+                      color: var(--cream2);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      display: block;
+                      margin-bottom: 6px;
+                    "
+                    >Teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    placeholder="+34 600 000 000"
+                    class="contact-field"
+                  />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    style="
+                      font-size: 0.78rem;
+                      color: var(--cream2);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      display: block;
+                      margin-bottom: 6px;
+                    "
+                    >Fecha</label
+                  >
+                  <input type="date" class="contact-field" />
+                </div>
+                <div>
+                  <label
+                    style="
+                      font-size: 0.78rem;
+                      color: var(--cream2);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      display: block;
+                      margin-bottom: 6px;
+                    "
+                    >Personas</label
+                  >
+                  <select class="contact-field">
+                    <option>1 persona</option>
+                    <option>2 personas</option>
+                    <option>3 personas</option>
+                    <option>4 personas</option>
+                    <option>5–8 personas</option>
+                    <option>Grupo grande (+8)</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label
+                  style="
+                    font-size: 0.78rem;
+                    color: var(--cream2);
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    display: block;
+                    margin-bottom: 6px;
+                  "
+                  >Turno</label
+                >
+                <select class="contact-field">
+                  <option>Comida (13:00–16:00)</option>
+                  <option>Cena (20:00–23:30)</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  style="
+                    font-size: 0.78rem;
+                    color: var(--cream2);
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    display: block;
+                    margin-bottom: 6px;
+                  "
+                  >Mensaje (opcional)</label
+                >
+                <textarea
+                  rows="3"
+                  placeholder="Alergias, ocasión especial, peticiones..."
+                  class="contact-field"
+                  style="resize: vertical"
+                ></textarea>
+              </div>
+              <button
+                class="btn-primary w-full py-4 text-sm mt-2"
+                onclick="handleReservation()"
+              >
+                Enviar solicitud de reserva
+              </button>
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: var(--cream2);
+                  text-align: center;
+                  margin-top: 8px;
+                "
+              >
+                O llámanos directamente:
+                <a href="tel:951435072" style="color: var(--gold)"
+                  >951 435 072</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LOCAL SEO STRIP ===================== -->
+    <div
+      style="
+        background: #0f0a04;
+        padding: 2rem 1.5rem;
+        border-top: 1px solid rgba(201, 168, 76, 0.1);
+      "
+    >
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="flex flex-wrap justify-center gap-3"
+          style="font-size: 0.78rem; color: rgba(245, 239, 224, 0.4)"
+        >
+          <span>Tapas Málaga Centro</span><span>·</span>
+          <span>Restaurante junto a la Catedral de Málaga</span><span>·</span>
+          <span>Pintxos Málaga</span><span>·</span>
+          <span>Vinos andaluces Málaga</span><span>·</span>
+          <span>Cena romántica Málaga</span><span>·</span>
+          <span>Grupos y eventos Málaga</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+          <div>
+            <div class="mb-4">
+              <span
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1.4rem;
+                  color: var(--gold);
+                  font-weight: 700;
+                "
+                >ILLARI</span
+              ><br />
+              <span
+                style="
+                  font-size: 0.65rem;
+                  letter-spacing: 0.3em;
+                  color: var(--cream2);
+                  text-transform: uppercase;
+                "
+                >Vinos y Tapas · Málaga</span
+              >
+            </div>
+            <p
+              style="
+                color: var(--cream2);
+                font-size: 0.875rem;
+                line-height: 1.7;
+              "
+            >
+              Cocina honesta, vinos con historia y un equipo que cuida cada
+              detalle. El sabor auténtico de Málaga en cada visita.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="text-gold text-sm font-bold mb-4"
+              style="letter-spacing: 0.12em; text-transform: uppercase"
+            >
+              Navegación
+            </h4>
+            <div class="flex flex-col gap-2">
+              <a href="#home" class="nav-link text-sm">Inicio</a>
+              <a href="#servicios" class="nav-link text-sm">Servicios</a>
+              <a href="#galeria" class="nav-link text-sm">Galería</a>
+              <a href="#resenas" class="nav-link text-sm">Reseñas</a>
+              <a href="#contacto" class="nav-link text-sm">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <h4
+              class="text-gold text-sm font-bold mb-4"
+              style="letter-spacing: 0.12em; text-transform: uppercase"
+            >
+              Contacto
+            </h4>
+            <div
+              class="space-y-2"
+              style="font-size: 0.875rem; color: var(--cream2)"
+            >
+              <p>C. Strachan, 14 – Distrito Centro</p>
+              <p>29015 Málaga, España</p>
+              <a href="tel:951435072" style="color: var(--gold); display: block"
+                >951 435 072</a
+              >
+              <p style="margin-top: 8px">Lun–Dom · 13:00–16:00 · 20:00–23:30</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+          "
+        >
+          <div class="stars text-sm">★★★★★</div>
+          <p
+            style="
+              font-size: 0.78rem;
+              color: rgba(245, 239, 224, 0.35);
+              text-align: center;
+            "
+          >
+            © 2025 Illari Vinos y Tapas · Todos los derechos reservados · C.
+            Strachan 14, Málaga
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== STICKY CTA (MOBILE) ===================== -->
+    <div class="sticky-cta">
+      <a href="tel:951435072" class="btn-primary flex-1 text-sm py-3"
+        >📞 Llamar</a
+      >
+      <a href="#contacto" class="btn-outline flex-1 text-sm py-3"
+        >📅 Reservar</a
+      >
+    </div>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+      // Reviews data - bilingual
+      const reviews = [
+        {
+          en: {
+            text: "We came here for dinner — glad we made a reservation as this place gets busy! The pintxos were all very tasty. My favourite was the grilled tuna belly. The pork cheek was really, really good — it melts in your mouth and the sauce was packed with flavour. The whole meal came to less than €60 including drinks. Great value for money!",
+            name: "International visitor",
+            date: "5 months ago",
+            details: "Food: 5 · Service: 5 · Atmosphere: 5",
+          },
+          es: {
+            text: "Vinimos a cenar — ¡menos mal que reservamos porque el sitio se llena! Los pintxos estaban todos riquísimos. Mi favorito fue la barriga de atún a la plancha. El carrillito de cerdo estaba de escándalo — se deshace en la boca y la salsa tenía un sabor increíble. Toda la cena costó menos de 60€ incluyendo las bebidas. ¡Calidad-precio insuperable!",
+            name: "Visitante internacional",
+            date: "Hace 5 meses",
+            details: "Comida: 5 · Servicio: 5 · Ambiente: 5",
+          },
+        },
+        {
+          en: {
+            text: "We have come here many times and Illari never disappoints — always very fresh and delicious food. The restaurant itself is a place you like to stay in, with sympathetic staff and a cosy interior. Highly recommend when visiting Málaga! The boquerones en vinagre are an absolute must.",
+            name: "Regular customer",
+            date: "Recent visit",
+            details:
+              "Dinner · €20–30 per person · Food: 5 · Service: 5 · Atmosphere: 5",
+          },
+          es: {
+            text: "Hemos venido muchas veces y Illari nunca decepciona — la comida siempre está muy fresca y deliciosa. El restaurante en sí es un lugar en el que apetece quedarse, con un personal encantador y un interior acogedor. ¡Muy recomendable para visitar Málaga! Los boquerones en vinagre son absolutamente imprescindibles.",
+            name: "Cliente habitual",
+            date: "Visita reciente",
+            details:
+              "Cena · 20–30€ por persona · Comida: 5 · Servicio: 5 · Ambiente: 5",
+          },
+        },
+        {
+          en: {
+            text: "A great place to have tapas near the cathedral. We had the ensalada rusa, tortilla española, and fried cod — each was very tasty. I would definitely recommend this place for lunch. Great location, wonderful atmosphere, and the staff couldn't have been more welcoming.",
+            name: "Lunch guest",
+            date: "Recent visit",
+            details: "Lunch · Food: 5 · Service: 5 · Atmosphere: 5",
+          },
+          es: {
+            text: "Un lugar estupendo para tomar tapas cerca de la catedral. Pedimos ensaladilla rusa, tortilla española y bacalao frito — todo estaba muy rico. Lo recomiendo sin duda para comer. Ubicación inmejorable, ambiente genial y el personal no podía ser más amable y acogedor.",
+            name: "Cliente de almuerzo",
+            date: "Visita reciente",
+            details: "Comida · Comida: 5 · Servicio: 5 · Ambiente: 5",
+          },
+        },
+      ];
+
+      let currentLang = "en";
+
+      function setLang(lang) {
+        currentLang = lang;
+        document
+          .getElementById("btn-en")
+          .classList.toggle("active", lang === "en");
+        document
+          .getElementById("btn-es")
+          .classList.toggle("active", lang === "es");
+        renderReviews();
+      }
+
+      function renderReviews() {
+        const container = document.getElementById("reviews-container");
+        container.innerHTML = reviews
+          .map((r) => {
+            const d = r[currentLang];
+            return `
+      <div class="review-card p-6">
+        <div class="flex items-center gap-1 mb-3">
+          ${[1, 2, 3, 4, 5].map(() => `<svg width="14" height="14" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`).join("")}
+        </div>
+        <p style="color:var(--cream2); font-size:0.9rem; line-height:1.75; margin:0 0 1rem; font-style:italic;">"${d.text}"</p>
+        <div style="border-top:1px solid rgba(201,168,76,0.15); padding-top:12px; margin-top:auto;">
+          <p style="color:var(--gold); font-weight:700; font-size:0.85rem; margin:0 0 2px;">${d.name}</p>
+          <p style="color:rgba(245,239,224,0.4); font-size:0.75rem; margin:0 0 4px;">${d.date}</p>
+          <p style="color:rgba(245,239,224,0.5); font-size:0.75rem; margin:0;">${d.details}</p>
+        </div>
+      </div>
+    `;
+          })
+          .join("");
+      }
+
+      // Hamburger
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+      });
+      function closeMenu() {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+      }
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((el) => obs.observe(el));
+
+      // Reservation button
+      function handleReservation() {
+        alert(
+          "¡Gracias! Nos pondremos en contacto contigo pronto para confirmar tu reserva.\n\nSi prefieres, llámanos directamente: 951 435 072",
+        );
+      }
+
+      // Init
+      renderReviews();
+    </script>
+  </body>
+</html>
